@@ -10,24 +10,21 @@ Write a C program to read 3 characters one by one and print the characters in a 
 4.	End the program.
 
 ## PROGRAM:
+```
+#include <stdio.h>
+
+int main() {
+    char char1, char2, char3;
+    printf("Enter three characters: ");
+    scanf("%c %c %c", &char1, &char2, &char3);
+    printf("Characters in reverse order: %c %c %c\n", char3, char2, char1);
+    return 0;
+}
+```
 
 ## OUTPUT:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/4fd6ce55-22ec-4688-94b6-b0e3762c7963)
 
 ## RESULT:
 Thus the program to read 3 characters one by one and print the characters in a reverse order has been executed successfully.
@@ -46,25 +43,31 @@ Write a C program to read A values and check whether A is positive number or not
 6.End the program.
 
 # PROGRAM:
+```
+#include <stdio.h>
+
+int main() {
+    int A;
+    printf("Enter a value: ");
+    scanf("%d", &A);
+
+    if (A > 0) {
+        printf("A is a positive number.\n");
+    } else {
+        printf("A is not a positive number.\n");
+    }
+
+    return 0;
+}
+```
 
 # OUTPUT:
 
-
-
-
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/6c3dc952-a995-4068-88db-991397335737)
 
 # RESULT:
 Thus the program to read A values and check whether A is positive number or not has been executed successfully.
  
- 
- 
-
 
 # EX-03- Operators-Expressions
 ## AIM:
@@ -80,16 +83,33 @@ Write a program to find minimum between two fraction numbers using conditional o
 7.	Print the minimum value.
 
 ## PROGRAM:
+```
+#include <stdio.h>
+
+int main() {
+    int num1, den1, num2, den2;
+    float frac1, frac2, min;
+
+    printf("Enter numerator and denominator for the first fraction: ");
+    scanf("%d %d", &num1, &den1);
+
+    printf("Enter numerator and denominator for the second fraction: ");
+    scanf("%d %d", &num2, &den2);
+
+    frac1 = (float) num1 / den1;
+    frac2 = (float) num2 / den2;
+
+    min = (frac1 < frac2) ? frac1 : frac2;
+
+    printf("The minimum fraction value is: %.2f\n", min);
+
+    return 0;
+}
+```
 
 ## OUTPUT:
 
-
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/ece51545-039b-4192-b16f-bb6db2a2b47a)
 
 ## RESULT:
 Thus the program to find minimum between two fraction numbers using conditional operator or ternary operator has been executed successfully.
@@ -111,18 +131,28 @@ Write a C program to check whether the input value is equal to 1 using simple if
 6.	End the program.
 
 ## PROGRAM:
+```
+#include <stdio.h>
+
+int main() {
+    int value;
+    printf("Enter a value: ");
+    scanf("%d", &value);
+
+    if (value == 1) {
+        printf("The input value is equal to 1.\n");
+    } else {
+        printf("The input value is not equal to 1.\n");
+    }
+
+    return 0;
+}
+```
 
 ## OUTPUT:
 
+![image](https://github.com/user-attachments/assets/26ff4998-3f40-4ed7-b7f3-68e81fa205eb)
 
-
-
-
-
-
-
-
-	
 
 ## RESULT:
 Thus the program to check whether the input value is equal to 1 using simple if statement has been executed successfully
@@ -147,8 +177,42 @@ c.	Else if percentage >= 36: Print “Division = Pass”
 9.	Else: Print “Division = Fail”
 10.	End
 ## PROGRAM:
+```
+#include <stdio.h>
+
+int main() {
+    int m1, m2, m3;
+    float tot, per;
+
+    printf("Enter marks for three subjects: ");
+    scanf("%d %d %d", &m1, &m2, &m3);
+
+    tot = m1 + m2 + m3;
+    per = tot / 3.0;
+
+    printf("Total marks: %.2f\n", tot);
+    printf("Percentage: %.2f%%\n", per);
+
+    if (m1 >= 40 && m2 >= 40 && m3 >= 40) {
+        if (per >= 60) {
+            printf("Division = First\n");
+        } else if (per >= 48) {
+            printf("Division = Second\n");
+        } else if (per >= 36) {
+            printf("Division = Pass\n");
+        }
+    } else {
+        printf("Division = Fail\n");
+    }
+
+    return 0;
+}
+```
 
 ## OUTPUT:
+
+![image](https://github.com/user-attachments/assets/c80c9942-aeb0-4c29-892a-e4fbfbbc452e)
+
 
 ## RESULT:
 The program successfully takes three subject marks, calculates the total and percentage, and correctly determines the division based on predefined grading logic.
